@@ -18,6 +18,4 @@ public class MessageDTO implements Serializable {
     private String sender; // 메시지 발신자
     private String roomId; // 메시지 방 번호 or 타겟 채널
 
-
-
 }
