@@ -31,5 +31,4 @@ public class MailController {
             log.info("인증에 실패하였습니다.");
         }
     }
-
 }
