@@ -13,16 +13,18 @@ public class MailConfig {
     @Bean
     public JavaMailSender javaMailSender() {
         JavaMailSenderImpl javaMailSender = new JavaMailSenderImpl();
-        javaMailSender.setHost("smtp.naver.com");
-        javaMailSender.setPort(465);
-        javaMailSender.setUsername("hoseok210@naver.com");
-        javaMailSender.setPassword("my-password");
+        javaMailSender.setHost("smtp.gmail.com");
+        javaMailSender.setPort(587);
+        javaMailSender.setUsername("hoseok210@gmail.com");
+        javaMailSender.setPassword("jevl xsya jvhb vrwt");
 
         Properties properties = javaMailSender.getJavaMailProperties();
         properties.put("mail.transport.protocol", "smtp");
         properties.put("mail.smtp.auth", "true");
         properties.put("mail.smtp.starttls.enable", "true");
-        properties.put("mail.debug", "true");
+        properties.put("mail.smtp.starttls.required", "true");
+        properties.put("mail.smtp.ssl.enable", "false");
+        properties.put("mail.smtp.ssl.trust", "smtp.gmail.com");
 
         return javaMailSender;
 
